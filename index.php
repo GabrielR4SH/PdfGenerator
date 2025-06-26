@@ -18,19 +18,20 @@ function showMenu() {
     echo "=================================\n\n";
     
     echo "Digite os dados da OS:\n";
-    $cliente = readline("Nome do Cliente: ");
-    $servico = readline("Descrição do Serviço: ");
-    $valor = (float) str_replace(',', '.', readline("Valor do Serviço: R$ "));
-    $tecnico = readline("Nome do Técnico: ");
-    $data = date('d/m/Y');
-    
-    return [
-        'cliente' => $cliente,
-        'servico' => $servico,
-        'valor' => $valor,
-        'tecnico' => $tecnico,
-        'data' => $data
+    $data = [
+        'cliente' => readline("Nome do Cliente: "),
+        'equipamento' => readline("Equipamento: "),
+        'defeito' => readline("Defeito relatado: "),
+        'servico' => readline("Serviço a ser realizado: "),
+        'laudo' => readline("Laudo técnico: "),
+        'valor' => (float) str_replace(',', '.', readline("Valor do Serviço: R$ ")),
+        'tecnico' => readline("Nome do Técnico: "),
+        'prazo' => readline("Prazo de entrega: "),
+        'garantia' => readline("Garantia: "),
+        'data' => date('d/m/Y')
     ];
+    
+    return $data;
 }
 
 function processPDF($data) {
@@ -39,7 +40,7 @@ function processPDF($data) {
     $pdfGenerator = new PDF_generator();
     $result = $pdfGenerator->generateOS($data);
     
-    echo "\nPDF gerado com sucesso!\n";
+    echo "\nPDF gerado com sucesso! (Design: " . json_encode($result['design']) . ")\n";
     return $result;
 }
 
