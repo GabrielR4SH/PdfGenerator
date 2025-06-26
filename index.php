@@ -20,7 +20,7 @@ function showMenu() {
     echo "Digite os dados da OS:\n";
     $cliente = readline("Nome do Cliente: ");
     $servico = readline("Descrição do Serviço: ");
-    $valor = readline("Valor do Serviço: R$ ");
+    $valor = (float) str_replace(',', '.', readline("Valor do Serviço: R$ "));
     $tecnico = readline("Nome do Técnico: ");
     $data = date('d/m/Y');
     
