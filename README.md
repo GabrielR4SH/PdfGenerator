@@ -1,7 +1,5 @@
 # Gerador de Ordens de Serviço (OS) em PDF
 
-![Exemplo de OS](example.png)
-
 Um gerador de PDF para ordens de serviço com:
 - Design aleatório a cada geração
 - Armazenamento em PDF e Base64
