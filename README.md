@@ -41,21 +41,6 @@ Após gerar, você pode:
 <li>Criar uma nova OS</li>
 
 
-<h3>Estrutura de arquivos:</h3>
-/projeto
-│   index.php          # Interface principal
-│   composer.json      # Configurações do projeto
-│   README.md          # Documentação
-│
-├───src
-│       PDF_generator.php  # Gerador de PDF
-│
-├───images            # PDFs gerados
-├───base64            # Versões Base64 dos PDFs
-└───vendor            # Dependências (ignorado pelo Git)
-
-
-
 ## Melhorias implementadas:
 
 1. **Designs aleatórios**:
